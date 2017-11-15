@@ -4,7 +4,7 @@
 #include<map>
 #include<string>
 
-class KeyPair()
+class KeyPair
 {
     public:
         KeyPair(const std::string &vk = "", const std::string &name = "") : VKName (vk), Name(name) {}
@@ -14,7 +14,7 @@ class KeyPair()
 };
 
 
-class Keys()
+class Keys
 {
     public:
         static std::map<int,KeyPair>KEYS;

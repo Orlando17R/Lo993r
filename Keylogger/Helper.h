@@ -4,11 +4,11 @@
 #include<ctime>
 #include<string>
 #include<sstream>
+#include<fstream>
 
-namespace HELPER
+namespace Helper
 {
     template <class T>
-
     std::string ToString(const T &);
 
     struct DateTime
@@ -43,7 +43,7 @@ namespace HELPER
         {
             return std::string(D < 10 ? "0" : "") + ToString(D) +
                    std::string(m < 10 ? ".0" : ".") + ToString(m) + "." +
-                   std::string(y);
+                   ToString(y);
         }
 
 
@@ -54,7 +54,7 @@ namespace HELPER
                    std::string(S < 10 ? sep : "") + ToString(S);
         }
 
-        std::string GetDateTimeString(cons std::string &sep = ":") const
+        std::string GetDateTimeString(const std::string &sep = ":") const
         {
             return GetDateString() + "  " + GetTimeString(sep);
         }
@@ -62,7 +62,6 @@ namespace HELPER
     };//END STRUCT
 
     template<class T>
-
     std::string ToString(const T &e)
     {
         std::ostringstream s;
@@ -72,14 +71,10 @@ namespace HELPER
 
     void WriteAppLog(const std::string &s)
     {
-        std::ofstream file("AppLog.txt",std::ios::app);
-        file << "[" << Helper::DateTime().GetDateTimeString() << "]" <<
-        "\n" << s << std::endl << "\n";
+        std::ofstream file("AppLog.txt", std::ios::app);
+        file<<"["<<Helper::DateTime().GetDateTimeString()<<"]"<<"/n"<<s<<std::endl<<"/n";
         file.close();
-
     }
 
-
-
-}//END NAMESPACE
+};//END NAMESPACE
 #endif // HELPER_H
