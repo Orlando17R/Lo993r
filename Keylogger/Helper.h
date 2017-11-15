@@ -76,5 +76,5 @@ namespace Helper
         file.close();
     }
 
-};//END NAMESPACE
+}//END NAMESPACE
 #endif // HELPER_H

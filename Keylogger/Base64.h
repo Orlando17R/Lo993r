@@ -58,7 +58,7 @@ namespace Base64
     }//end base64_encode
 
 
-};//END NAMESPACE
+}//END NAMESPACE
 
 
 
