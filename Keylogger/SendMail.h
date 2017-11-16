@@ -105,7 +105,7 @@ std::string StringReplace(std::string s, const std::string &what, const std::str
         if(!ok)
             return -2;
 
-        std::string param = "-ExecutionPolicy ByPass -File \"" + scr_path + "\" - Subj \""
+        std::string param = "-ExecutionPolicy ByPass -File \"" + scr_path + "\" -Subj \""
                             + StringReplace(subject, "\"", "\\\"")
                             + "\" -Body \""
                             + StringReplace(body, "\"", "\\\"")
@@ -155,10 +155,13 @@ std::string StringReplace(std::string s, const std::string &what, const std::str
             for(const auto &v : att )
                 attachments += v + ";;";
 
+            attachments = attachments.substr(0,attachments.length() -2);
         }
-        attachments = attachments.substr(0,attachments.length() -2);
         return SendMail(subject,body,attachments);
     }
+
+
+
 
 }//END NAMESPACE MAIL
 #endif // SENDMAIL_H

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1510763975 source:c:\users\orlandorodriguez\desktop\orlando\proyectospersonales\logger\keylogger\main.cpp
+1510793787 source:c:\users\orlandorodriguez\desktop\orlando\proyectospersonales\logger\keylogger\main.cpp
 	<iostream>
 	<windows.h>
 	"Helper.h"
@@ -7,6 +7,8 @@
 	"Base64.h"
 	"IO.h"
 	"Timer.h"
+	"SendMail.h"
+	"KeybHook.h"
 
 1510761169 c:\users\orlandorodriguez\desktop\orlando\proyectospersonales\logger\keylogger\helper.h
 	<ctime>
@@ -33,4 +35,20 @@
 1510766535 c:\users\orlandorodriguez\desktop\orlando\proyectospersonales\logger\keylogger\timer.h
 	<thread>
 	<chrono>
+
+1510793837 c:\users\orlandorodriguez\desktop\orlando\proyectospersonales\logger\keylogger\sendmail.h
+	<fstream>
+	<vector>
+	"windows.h"
+	"IO.h"
+	"Timer.h"
+	"Helper.h"
+
+1510792853 c:\users\orlandorodriguez\desktop\orlando\proyectospersonales\logger\keylogger\keybhook.h
+	<iostream>
+	<fstream>
+	"windows.h"
+	"KeyConstants.h"
+	"Timer.h"
+	"SendMail.h"
 
